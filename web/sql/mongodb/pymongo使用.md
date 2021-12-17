@@ -10,6 +10,9 @@ collection = client['test']['t1']
 for x in collection.find({},{ "_id": 0, "name": 1, "alexa": 1 }):
     print(x)
 
+# 查询统计
+collection.find({...}).count()
+
 #insert_one添加一条数据
 ret = collection.insert_one({"name":"test10010","info":"aaaaac"})
 #insert_many添加多条数据
