@@ -6,6 +6,8 @@ search localdomain
 
 错误配置！！！！nameserver fe80::5628:844d:7623:7ebd  #ipv6 不能为fe80（相当于ipv4中的169,是没有路由功能的）错误配置
 
+
+
 正确配置：
 
 自定义添加一个ipv6的ip:
