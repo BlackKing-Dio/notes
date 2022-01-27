@@ -29,3 +29,27 @@ sudo apt install mongodb-org
 sudo systemctl start mongod.service
 ## 开机自启
 sudo systemctl enable mongod
+
+
+# 设置远程连接
+##修改配置文件
+sudo vim /etc/mongod.conf
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+
+security:
+  authorization: enabled
+
+## 远程连接
+加密方式选择 SCRAM-SHA-1
+
+## 解决无法启动的问题
+查看 mongodb 状态 sudo systemctl status mongod
+
+sudo mongod --repair --dbpath /var/lib/mongodb
+chown -R mongodb:mongodb /var/lib/mongodb
+chown mongodb:mongodb /tmp/mongodb-27017.sock
+sudo systemctl restart mongod
+
+再次查看 mongodb 状态 sudo systemctl status mongod
