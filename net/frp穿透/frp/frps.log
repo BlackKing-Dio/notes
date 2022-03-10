@@ -1,0 +1,4 @@
+2022/01/05 13:53:51 [I] [service.go:139] frps tcp listen on 0.0.0.0:7000
+2022/01/05 13:53:51 [I] [service.go:181] http service listen on 0.0.0.0:7001
+2022/01/05 13:53:51 [I] [service.go:232] Dashboard listen on 0.0.0.0:8889
+2022/01/05 13:53:51 [I] [root.go:204] Start frps success
