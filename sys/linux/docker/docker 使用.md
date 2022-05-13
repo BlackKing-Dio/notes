@@ -12,7 +12,7 @@ sudo docker pull ubuntu
 sudo docker run -itd --name ubuntu-test ubuntu
 ## 
 sudo docker run -P -d ubuntu:latest
-
+##
 sudo docker run -p 8000:80 -it gis /bin/bash
 
 ## 查看正在运行的容器
@@ -36,5 +36,7 @@ sudo docker rm <CONTAINER ID>
 sudo docker cp 本地文件的路径 <CONTAINER ID>:<docker容器内的路径>
 
 ## 为镜像改名
-sudo docker tag <IMAGE_ID> <NAME>
+sudo docker tag <IMAGE_ID> <REPOSITORY>
 
+## 保存容器修改
+docker commit <CONTAINER ID> <REPOSITORY>
